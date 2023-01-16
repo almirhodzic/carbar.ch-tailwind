@@ -13,58 +13,76 @@
 }
 
 @layer components {
-    .navlink { @apply 
-        flex px-4 py-2 rounded-md lg:rounded-none lg:py-4 
+    .menu {
+        @apply w-full lg:inline-flex lg:mt-0 pb-4 lg:pb-0;
+    }
+    .menu ul {
+        @apply flex flex-col w-full lg:w-auto lg:flex-row lg:space-y-0 mx-auto;
+    }
+    .dropdownmenu {
+        @apply left-0 lg:pb-2 pb-1 lg:absolute lg:shadow-md lg:bg-white dark:bg-gray-800 transform duration-700 ease-in-out;
+    }
+    .dropdownmenu ul {
+        @apply lg:space-y-2 space-y-0 lg:w-48;
+    }
+    .themebutton {
+        @apply flex items-center ml-auto focus:outline-none;
+    }
+    .themeicon {
+        @apply flex items-center w-6 h-6 lg:w-5 lg:h-5 hover:opacity-100 duration-700;
+    }
+    .navlink { 
+        @apply 
+        uppercase
+        flex px-4 py-2 lg:py-4 
+        rounded-md 
+        lg:rounded-none 
         text-gray-500 
         lg:text-gray-500
-        dark:hover:text-gray-300
         hover:text-maincolorhover
         hover:lg:text-maincolor
         dark:lg:text-gray-400 
-        uppercase
+        dark:hover:text-gray-300;
     }
-
     .navlink-dropdown {
         @apply 
         after:content-['🡣'] 
         after:text-xs 
-        after:text-gray-500 
-        dark:lg:after:text-maincolor 
         after:mt-1 
         after:ml-2
+        after:text-gray-500 
+        dark:lg:after:text-maincolor;
     }
-
     .navlink-active {
         @apply 
         lg:text-maincolor 
-        dark:text-white 
         text-maincolor
         hover:text-maincolor
+        dark:text-white 
         underline 
         underline-offset-4 
         lg:underline-offset-4 
         lg:decoration-1
-        lg:decoration-maincolor
+        lg:decoration-maincolor;
     }
-
     ul li ul li .navlink {
         @apply 
         lg:px-2 lg:py-1 mx-3 py-1 
         bg-transparent 
         text-gray-500 
         lg:text-gray-600 
-        hover:lg:bg-white 
+        dark:hover:text-gray-300
         dark:hover:lg:bg-gray-900 
         dark:hover:lg:text-maincolor
+        hover:lg:bg-white
         hover:lg:text-maincolor
         hover:text-maincolor 
         rounded-md 
         normal-case 
-        dark:hover:text-gray-300
         before:content-['🡢'] 
         before:mr-2 
         before:text-xs 
         before:mt-1 
-        lg:before:content-none
+        lg:before:content-none;
     }
 }
