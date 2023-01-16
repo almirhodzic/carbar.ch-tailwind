@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: Barlow;
+        src: url(../dist/assets/fonts/barlow/barlow.regular.ttf) format("truetype");
+     }
+     html {
+        font-family: Barlow;
+     }
+}
+
+@layer components {
+    .navlink { @apply 
+        flex px-4 py-2 rounded-md lg:rounded-none lg:py-4 
+        text-gray-500 
+        lg:text-gray-500
+        dark:hover:text-gray-300
+        hover:text-maincolorhover
+        hover:lg:text-maincolor
+        dark:lg:text-gray-400 
+        uppercase
+    }
+
+    .navlink-dropdown {
+        @apply 
+        after:content-['🡣'] 
+        after:text-xs 
+        after:text-gray-500 
+        dark:lg:after:text-maincolor 
+        after:mt-1 
+        after:ml-2
+    }
+
+    .navlink-active {
+        @apply 
+        lg:text-maincolor 
+        dark:text-white 
+        text-maincolor
+        hover:text-maincolor
+        underline 
+        underline-offset-4 
+        lg:underline-offset-4 
+        lg:decoration-1
+        lg:decoration-maincolor
+    }
+
+    ul li ul li .navlink {
+        @apply 
+        lg:px-2 lg:py-1 mx-3 py-1 
+        bg-transparent 
+        text-gray-500 
+        lg:text-gray-600 
+        hover:lg:bg-white 
+        dark:hover:lg:bg-gray-900 
+        dark:hover:lg:text-maincolor
+        hover:lg:text-maincolor
+        hover:text-maincolor 
+        rounded-md 
+        normal-case 
+        dark:hover:text-gray-300
+        before:content-['🡢'] 
+        before:mr-2 
+        before:text-xs 
+        before:mt-1 
+        lg:before:content-none
+    }
+}
