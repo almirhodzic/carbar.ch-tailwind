@@ -5,25 +5,64 @@
 @layer base {
     @font-face {
         font-family: Barlow;
-        src: url(../dist/assets/fonts/barlow/barlow.regular.ttf) format("truetype");
+        src: url(/dist/assets/fonts/barlow/barlow.regular.ttf) format("truetype");
      }
      html {
         font-family: Barlow;
+        color: #666;
      }
+     .togglerbutton {
+        @apply 
+        inline-flex 
+        items-center 
+        justify-center 
+        ml-auto 
+        text-white 
+        rounded-md 
+        outline-none 
+        lg:hidden 
+        focus:outline-none;
+    }
+    .thenav {
+        @apply 
+        bg-gray-100 
+        dark:bg-gray-800 
+        dark:lg:bg-gray-800 
+        dark:lg:border-gray-700
+        lg:bg-white
+        lg:shadow-md
+        lg:border-t 
+        lg:rounded-none 
+        lg:m-0 m-4
+        rounded-md
+        transform duration-700 
+        ease-in-out;
+    }
 }
 
 @layer components {
-    .menu {
-        @apply w-full lg:inline-flex lg:mt-0 pb-4 lg:pb-0;
-    }
-    .menu ul {
-        @apply flex flex-col w-full lg:w-auto lg:flex-row lg:space-y-0 mx-auto;
-    }
+    .background {
+        @apply 
+        p-2 md:p-4
+        bg-backgroundcolor 
+        dark:bg-backgrounddark;
+    }  
     .dropdownmenu {
-        @apply left-0 lg:pb-2 pb-1 lg:absolute lg:shadow-md lg:bg-white dark:bg-gray-800 transform duration-700 ease-in-out;
+        @apply 
+        left-0 lg:pb-3 pb-1 
+        lg:absolute 
+        lg:shadow-md 
+        lg:bg-white 
+        dark:bg-gray-800 
+        transform duration-700 
+        ease-in-out 
+        rounded-b-md;
     }
     .dropdownmenu ul {
-        @apply lg:space-y-2 space-y-0 lg:w-48;
+        @apply 
+        space-y-0 
+        lg:space-y-2 
+        lg:w-48;
     }
     .themebutton {
         @apply flex items-center ml-auto focus:outline-none;

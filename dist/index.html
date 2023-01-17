@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" x-data="{darkmode:false}" :class="darkmode ? 'dark' : '' ">
+<html lang="de" x-data="{darkmode:true}" :class="darkmode ? 'dark' : '' ">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +10,15 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $('#nav').load('nav.html');
+        $('#footer').load('footer.html');
+      });
+    </script>
 </head>
-<body class="debug-screens bg-backgroundcolor dark:bg-backgrounddark p-2 md:p-4">
+<body class="debug-screens background">
 <div id="app" class=" bg-white dark:bg-gray-900 rounded-lg w-12/12 md:w-11/12 lg:w-10/12 xl:w-9/12 2xl:w-8/12 mx-auto shadow-md">
 <!--header start-->
   <header>
@@ -31,58 +38,28 @@
       </section>
   </header>
 <!--header stop-->
+
 <!--nav start-->
-  <nav class="bg-gray-100 dark:bg-gray-800 lg:bg-white dark:lg:bg-gray-800 lg:shadow-md dark:lg:border-gray-700 lg:border-t rounded-md lg:rounded-none lg:m-0 m-4 transform duration-700 ease-in-out" x-data="{navbarOpen:false}">
-    <!-- container start -->
-    <div class="container flex flex-wrap px-4 mx-auto lg:space-x-0">
-      <!-- brand start -->
-      <a href="#" class="inline-flex py-4 pl-4 text-xl tracking-wider text-maincolor dark:text-white lg:hidden">CAR BAR<span class="text-gray-500 ml-2"> - die mobile Cocktailbar</span></a>
-      <!-- brand end -->
-      <!-- toggler-btn start -->
-      <button class="inline-flex items-center justify-center ml-auto text-white rounded-md outline-none lg:hidden focus:outline-none" @click="navbarOpen = !navbarOpen">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-maincolor" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      <!-- toggler-btn end -->
-      <!-- menu -->
-      <div class="menu" :class="{'hidden': !navbarOpen,'flex scale-up-ver-top': navbarOpen}">
-        <ul>
-          <li><a href="#" class="navlink navlink-active">Home</a></li>
-          <!-- dropdown start -->
-          <li class="relative" x-data="{dropdownOpen:false}">
-            <a href="#" class="navlink navlink-dropdown" @click="dropdownOpen = ! dropdownOpen">Partyservice</a>
-            <div style="display:none;" class="dropdownmenu scale-up-ver-top" x-show="dropdownOpen" @click.away="dropdownOpen = false">
-              <ul>
-                <li><a href="#" class="navlink">Carbar mieten</a></li>
-                <li><a href="#" class="navlink">DJ mieten</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- dropdown end -->
-          <li><a href="#" class="navlink">Impressionen</a></li>
-          <li><a href="#" class="navlink">Kontakt</a></li>
-          <li><a href="#" class="navlink">AGB's</a></li>
-          <li><a href="#" class="navlink">Facebook</a></li>
-          <li class="lg:flex lg:items-center hidden">
-            <button @click="darkmode = !darkmode" class="themebutton">
-              <ion-icon name="moon-outline" x-show="!darkmode" class="themeicon opacity-20 text-maincolor"></ion-icon>
-              <ion-icon name="sunny-outline" x-show="darkmode" class="themeicon opacity-50 text-gray-300 hover:text-gray-100"></ion-icon>
-            </button>
-          </li>
-        </ul>
-      </div>
-      <!-- menu end -->
-    </div>
-    <!-- container end -->
-  </nav>
+<div id="nav"></div>
 <!--nav stop-->
+
 <!--main start-->
-<main>MAIN</main>
+<main class="py-4 px-4 lg:p-12 dark:text-gray-400">
+  <div class="text-center">
+    <h2 class="text-2xl lg:text-4xl font-semibold"><span class="text-maincolor">CarBar</span>, die Cocktailbar auf Rädern</h2>
+    <h3 class="text-lg lg:text-2xl lg:font-semibold lg:mt-3">Garantierter Spass überall wo Sie wollen!</h3>
+    <div class="my-4 text-sm lg:text-lg dark:text-gray-500 max-w-sm lg:max-w-3xl mx-auto">
+      <div>
+      <p>Egal ob Hochzeit, Messe, ein Firmenanlass, Familienfeier oder Geburtstag: Mit unserer mobilen Cocktailbar glänzt Ihr Anlass noch mehr! Unser qualifiziertes und motiviertes Personal zaubert Ihren Gästen leckere Drinks und Cocktails oder einfach geniale Shots in handumdrehen.</p>
+    </div>
+  </div>
+</main>
 <!--main stop-->
+
 <!--footer start-->
-<footer>FOOTER</footer>
+<div id="footer" class="p-4 lg:p-0 transform duration-700 ease-in-out"></div>
 <!--footer stop-->
+
 </div>
 </body>
 </html>

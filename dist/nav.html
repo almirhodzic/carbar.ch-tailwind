@@ -1,0 +1,46 @@
+<!--nav start-->
+<nav class="thenav" x-data="{navbarOpen:false}">
+  <!-- container start -->
+  <div class="container flex flex-wrap px-4 mx-auto lg:space-x-0">
+    <!-- brand start -->
+    <a href="#" class="inline-flex py-4 pl-4 text-xl tracking-wider text-maincolor dark:text-white lg:hidden">CAR BAR<span class="text-gray-500 ml-2"> - die mobile Cocktailbar</span></a>
+    <!-- brand end -->
+    <!-- toggler-btn start -->
+    <button class="togglerbutton" @click="navbarOpen = !navbarOpen">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-maincolor" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    <!-- toggler-btn end -->
+    <!-- menu -->
+    <div class="w-full lg:inline-flex lg:mt-0 pb-4 lg:pb-0" :class="{'hidden': !navbarOpen,'flex scale-up-ver-top': navbarOpen}">
+      <ul class="flex flex-col w-full lg:w-auto lg:flex-row lg:space-y-0 mx-auto">
+        <li><a href="#" class="navlink navlink-active">Home</a></li>
+        <!-- dropdown start -->
+        <li class="relative" x-data="{dropdownOpen:false}">
+          <a href="#" class="navlink navlink-dropdown" @click="dropdownOpen = ! dropdownOpen">Partyservice</a>
+          <div style="display:none;" class="dropdownmenu scale-up-ver-top" x-show="dropdownOpen" @click.away="dropdownOpen = false">
+            <ul>
+              <li><a href="#" class="navlink">Carbar mieten</a></li>
+              <li><a href="#" class="navlink">DJ mieten</a></li>
+            </ul>
+          </div>
+        </li>
+        <!-- dropdown end -->
+        <li><a href="#" class="navlink">Impressionen</a></li>
+        <li><a href="#" class="navlink">Kontakt</a></li>
+        <li><a href="#" class="navlink">AGB's</a></li>
+        <li><a href="#" class="navlink">Facebook</a></li>
+        <li class="lg:flex lg:items-center hidden">
+          <button @click="darkmode = !darkmode" class="themebutton">
+            <ion-icon name="moon-outline" x-show="!darkmode" class="themeicon opacity-20 text-maincolor"></ion-icon>
+            <ion-icon name="sunny-outline" x-show="darkmode" class="themeicon opacity-50 text-gray-300 hover:text-gray-100"></ion-icon>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- menu end -->
+  </div>
+  <!-- container end -->
+</nav>
+<!--nav stop-->

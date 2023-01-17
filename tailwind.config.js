@@ -15,9 +15,6 @@ module.exports = {
         backgroundcolor : '#fad3d9',
         backgrounddark : '#05080e'
         },
-      fontFamily: {
-        mainfont : ['Barlow']
-      },
     },
   },
   plugins: [
