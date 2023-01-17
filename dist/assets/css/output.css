@@ -7605,6 +7605,14 @@ ul li ul li .navlink:hover {
 }
 
 @media (min-width: 360px) {
+  .xs\:ml-2 {
+    margin-left: 0.5rem;
+  }
+
+  .xs\:inline-block {
+    display: inline-block;
+  }
+
   .xs\:text-yellow-400 {
     --tw-text-opacity: 1;
     color: rgb(250 204 21 / var(--tw-text-opacity));
