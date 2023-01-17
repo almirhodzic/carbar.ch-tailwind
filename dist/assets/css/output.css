@@ -7617,6 +7617,11 @@ ul li ul li .navlink:hover {
     --tw-text-opacity: 1;
     color: rgb(250 204 21 / var(--tw-text-opacity));
   }
+
+  .dark .xs\:dark\:text-maincolor {
+    --tw-text-opacity: 1;
+    color: rgb(255 0 128 / var(--tw-text-opacity));
+  }
 }
 
 @media (min-width: 640px) {
