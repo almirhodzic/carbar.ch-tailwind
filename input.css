@@ -4,14 +4,23 @@
 
 @layer base {
     @font-face {
-        font-family: Barlow;
+        font-family: "Swanky and Moo Moo";
+        src: url(/dist/assets/fonts/swanky/SwankyandMooMoo-Regular.ttf) format("truetype");
+    }
+    @font-face {
+        font-family: "Walter Turncoat";
+        src: url(/dist/assets/fonts/turncoat/WalterTurncoat-Regular.ttf) format("truetype");
+    }
+    @font-face {
+        font-family: "Praise";
+        src: url(/dist/assets/fonts/praise/Praise-Regular.ttf) format("truetype");
+    }
+    html {
+        font-family: 'Barlow';
+        color: #333;
         src: url(/dist/assets/fonts/barlow/barlow.regular.ttf) format("truetype");
-     }
-     html {
-        font-family: Barlow;
-        color: #666;
-     }
-     .togglerbutton {
+    }
+    .togglerbutton {
         @apply 
         inline-flex 
         items-center 
@@ -38,6 +47,29 @@
         transform duration-700 
         ease-in-out;
     }
+    .btn {
+        @apply 
+        rounded-lg 
+        shadow-sm 
+        transition 
+        hover:shadow-none 
+        px-3 py-2 lg:px-4 lg:py-2 
+         flex items-center 
+        text-sm lg:text-lg;
+     }
+     .btn-icon {
+        @apply flex items-center;
+     }
+     .btn-maincolor {
+        @apply 
+        hover:bg-maincolor 
+        border-maincolor 
+        border-2 border-opacity-50 
+        text-maincolor
+        hover:text-gray-200
+        dark:text-gray-500
+        dark:hover:text-gray-200;
+     }
 }
 
 @layer components {
