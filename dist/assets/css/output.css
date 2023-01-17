@@ -7666,6 +7666,14 @@ ul li ul li .navlink:hover {
     }
   }
 
+  .sm\:ml-2 {
+    margin-left: 0.5rem;
+  }
+
+  .sm\:inline-block {
+    display: inline-block;
+  }
+
   .sm\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
