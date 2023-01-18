@@ -152,8 +152,8 @@
         normal-case 
         before:content-['\21E2'] 
         before:mr-2 
-        before:text-xs 
-        before:mt-1 
+        before:text-lg 
+        before:flex items-center
         lg:before:content-none;
     }
     

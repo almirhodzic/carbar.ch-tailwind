@@ -5487,6 +5487,7 @@ textarea.form-control.is-invalid {
 ul li ul li .navlink {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
+  align-items: center;
   border-radius: 0.375rem;
   background-color: transparent;
   padding-top: 0.25rem;
@@ -5498,9 +5499,9 @@ ul li ul li .navlink {
 
 ul li ul li .navlink::before {
   margin-right: 0.5rem;
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  display: flex;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   --tw-content: '\21E2';
   content: var(--tw-content);
 }
