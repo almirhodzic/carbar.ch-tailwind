@@ -8,7 +8,7 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
 
   theme: {
-    screens: {
+     screens: {
     'xss': '320px',
     'xs': '360px',
     'sm': '640px',
@@ -25,6 +25,9 @@ module.exports = {
         'swanky': ['Swanky and Moo Moo', 'cursive'],
         'turncoat': ['Walter Turncoat', 'cursive'],
         'praise': ['Praise', 'cursive'],
+      },
+      fontSize: {
+        xss: '0.8rem',
       },
     colors : {
       'maincolor' : '#ff0080',

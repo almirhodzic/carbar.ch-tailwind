@@ -505,10 +505,10 @@ html {
   display: flex;
   align-items: center;
   border-radius: 0.5rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -5445,7 +5445,7 @@ textarea.form-control.is-invalid {
   line-height: 1rem;
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
-  --tw-content: '🡣';
+  --tw-content: '\22EE';
   content: var(--tw-content);
 }
 
@@ -5501,7 +5501,7 @@ ul li ul li .navlink::before {
   margin-top: 0.25rem;
   font-size: 0.75rem;
   line-height: 1rem;
-  --tw-content: '🡢';
+  --tw-content: '\21E2';
   content: var(--tw-content);
 }
 
@@ -5543,6 +5543,10 @@ ul li ul li .navlink:hover {
     --tw-text-opacity: 1;
     color: rgb(255 0 128 / var(--tw-text-opacity));
   }
+}
+
+ion-icon {
+  pointer-events: none;
 }
 
 .sr-only {
@@ -5695,22 +5699,6 @@ ul li ul li .navlink:hover {
   margin-right: 24rem;
 }
 
-.mb-2\.5 {
-  margin-bottom: 0.625rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mb-0 {
-  margin-bottom: 0px;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .ml-auto {
   margin-left: auto;
 }
@@ -5721,6 +5709,22 @@ ul li ul li .navlink:hover {
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-2\.5 {
+  margin-bottom: 0.625rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mr-4 {
@@ -6062,10 +6066,6 @@ ul li ul li .navlink:hover {
   list-style-position: outside;
 }
 
-.list-none {
-  list-style-type: none;
-}
-
 .appearance-none {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -6185,10 +6185,6 @@ ul li ul li .navlink:hover {
 
 .grid-flow-col-dense {
   grid-auto-flow: column dense;
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -6347,8 +6343,10 @@ ul li ul li .navlink:hover {
   justify-items: stretch;
 }
 
-.gap-12 {
-  gap: 3rem;
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -6729,14 +6727,14 @@ ul li ul li .navlink:hover {
   border-style: none;
 }
 
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .bg-blue-600 {
@@ -6883,16 +6881,16 @@ ul li ul li .navlink:hover {
      object-fit: scale-down;
 }
 
-.p-6 {
-  padding: 1.5rem;
-}
-
 .p-0 {
   padding: 0px;
 }
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .py-4 {
@@ -7014,11 +7012,6 @@ ul li ul li .navlink:hover {
   font-family: "some font",sans-serif;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -7027,6 +7020,20 @@ ul li ul li .navlink:hover {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-xss {
+  font-size: 0.8rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-3xl {
@@ -7122,6 +7129,16 @@ ul li ul li .navlink:hover {
   letter-spacing: 0.1em;
 }
 
+.text-maincolor {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 128 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -7135,16 +7152,6 @@ ul li ul li .navlink:hover {
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.text-maincolor {
-  --tw-text-opacity: 1;
-  color: rgb(255 0 128 / var(--tw-text-opacity));
-}
-
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -7523,6 +7530,11 @@ ul li ul li .navlink:hover {
   color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
+.hover\:text-maincolor:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 128 / var(--tw-text-opacity));
+}
+
 .hover\:no-underline:hover {
   text-decoration-line: none;
 }
@@ -7597,14 +7609,14 @@ ul li ul li .navlink:hover {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.dark .dark\:bg-gray-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-}
-
 .dark .dark\:bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:text-gray-500 {
@@ -7617,12 +7629,28 @@ ul li ul li .navlink:hover {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+.dark .dark\:text-maincolor {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 128 / var(--tw-text-opacity));
+}
+
 .dark .dark\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 320px) {
+  .xss\:hidden {
+    display: none;
+  }
+}
+
 @media (min-width: 360px) {
+  .xs\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .dark .xs\:dark\:text-maincolor {
     --tw-text-opacity: 1;
     color: rgb(255 0 128 / var(--tw-text-opacity));
@@ -7696,6 +7724,14 @@ ul li ul li .navlink:hover {
     margin-bottom: 2.5rem;
   }
 
+  .md\:inline-block {
+    display: inline-block;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:max-h-full {
     max-height: 100%;
   }
@@ -7706,6 +7742,12 @@ ul li ul li .navlink:hover {
 
   .md\:max-w-3xl {
     max-width: 48rem;
+  }
+
+  .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:py-6 {
@@ -7771,12 +7813,12 @@ ul li ul li .navlink:hover {
     border-top-right-radius: 0px;
   }
 
-  .lg\:p-12 {
-    padding: 3rem;
-  }
-
   .lg\:p-0 {
     padding: 0px;
+  }
+
+  .lg\:p-12 {
+    padding: 3rem;
   }
 
   .lg\:py-10 {

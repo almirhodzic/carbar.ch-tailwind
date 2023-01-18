@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" x-data="{darkmode:true}" :class="darkmode ? 'dark' : '' ">
+<html lang="de" x-data="{darkmode:false}" :class="darkmode ? 'dark' : '' ">
 <head>
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="expires" content="timestamp">
@@ -16,8 +16,8 @@
     <script src="assets/js/tw-elements/dist/js/index.min.js"></script>
     <script>
       $(document).ready(function() {
-        $('#nav').load('nav.html');
-        $('#footer').load('footer.html');
+        $('#nav').load('_nav.html');
+        $('#footer').load('_footer.html');
       });
     </script>
 </head>

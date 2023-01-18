@@ -53,7 +53,7 @@
         shadow-sm 
         transition 
         hover:shadow-none 
-        px-3 py-2
+        px-4 py-3
         flex items-center 
         lg:text-lg
      }
@@ -117,7 +117,7 @@
     }
     .navlink-dropdown {
         @apply 
-        after:content-['🡣'] 
+        after:content-['\22EE'] 
         after:text-xs 
         after:mt-1 
         after:ml-2
@@ -150,10 +150,18 @@
         hover:text-maincolor 
         rounded-md 
         normal-case 
-        before:content-['🡢'] 
+        before:content-['\21E2'] 
         before:mr-2 
         before:text-xs 
         before:mt-1 
         lg:before:content-none;
+    }
+    
+    .linklistfooter a {
+        @apply mr-4
+    }
+
+    ion-icon {
+        pointer-events: none;
     }
 }
